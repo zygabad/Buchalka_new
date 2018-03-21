@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Buchalka.iml" filepath="$PROJECT_DIR$/Buchalka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Buchalka61_BankApp/Buchalka61_BankApp.iml" filepath="$PROJECT_DIR$/Buchalka61_BankApp/Buchalka61_BankApp.iml" />
+    </modules>
+  </component>
+</project>
