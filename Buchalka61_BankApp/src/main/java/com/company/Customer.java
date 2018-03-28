@@ -8,10 +8,19 @@ public class Customer {
     private String customerLastName;
     private ArrayList<Transaction> customerTransactions = new ArrayList<>();
 
+
     public Customer(String customerFirstName, String customerMIddleName, String customerLastName) {
         this.customerFirstName = customerFirstName;
         this.customerMIddleName = customerMIddleName;
         this.customerLastName = customerLastName;
+    }
+
+    public Customer(int customerId) {
+
+    }
+
+    public Customer() {
+
     }
 
     public boolean addTransaction(Transaction transaction) {
@@ -49,7 +58,14 @@ public class Customer {
         return position;
     }
 
-
+    public String transactionInfo(Long transactionId) {
+        Transaction newTransaction = this.customerTransactions.get(this.queryTransaction(transactionId));
+        String transactionInfo = "Transaction info -> \r + " +
+                "Money sender -> \r" + newTransaction.getMoneySender() +
+                "Transaction ID -> \r" + newTransaction.getTransactionId() +
+                "Transaction Amount -> " + newTransaction.getTransactionAmount();
+        return transactionInfo;
+    }
 
     public String getCustomerFirstName() {
         return customerFirstName;

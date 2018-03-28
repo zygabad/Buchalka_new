@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Transaction {
     private long transactionId;
     private String accountReceiver;
@@ -39,5 +41,14 @@ public class Transaction {
 
     public double getTransactionAmount() {
         return transactionAmount;
+    }
+
+    public void printTransactions(ArrayList<Transaction> transactionArrayList, Customer customer) {
+        System.out.println("Transactions for customer: " + customer.getCustomerLastName());
+        for (int i = 0; i < transactionArrayList.size(); i++) {
+            System.out.println("Transaction ID -> " + transactionArrayList.get(i).getTransactionId());
+        }
+
+
     }
 }

@@ -5,7 +5,6 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 
 public class CustomerTest {
     private static final String CUSTOMER_FIRST_NAME = "Zygmunt";
@@ -58,7 +57,7 @@ public class CustomerTest {
         //given
         Customer customer = new Customer(CUSTOMER_FIRST_NAME, CUSTOMER_MIDDLE_NAME, CUSTOMER_LAST_NAME);
         Transaction newTransaction = new Transaction(TRANSACTION_ID, ACCOUNT_RECEIVER, ACCOUNT_SENDER,
-                                                    MONEY_SENDER, MONEY_RECEIVER, TRANSACTION_AMOUNT);
+                MONEY_SENDER, MONEY_RECEIVER, TRANSACTION_AMOUNT);
         customer.addTransaction(newTransaction);
 
         //when
@@ -79,9 +78,31 @@ public class CustomerTest {
         customer.addTransaction(newTransaction);
 
         //when
-        customer.queryTransaction(CUSTOMER_FIRST_NAME,CUSTOMER_MIDDLE_NAME, CUSTOMER_LAST_NAME);
+        customer.queryTransaction(CUSTOMER_FIRST_NAME, CUSTOMER_MIDDLE_NAME, CUSTOMER_LAST_NAME);
 
         //then
-        assertEquals(0, customer.queryTransaction(CUSTOMER_FIRST_NAME,CUSTOMER_MIDDLE_NAME, CUSTOMER_LAST_NAME));
+        assertEquals(0, customer.queryTransaction(CUSTOMER_FIRST_NAME, CUSTOMER_MIDDLE_NAME, CUSTOMER_LAST_NAME));
+    }
+    //PYTANIE w when i w then mam wywolanie query - ok?
+    //PYTANIE czy tak testowac przeciazone metody jak tutuaj?
+
+
+    @Test
+    public void transactionInfo() {
+
+        //given
+        Customer customer = new Customer(CUSTOMER_FIRST_NAME, CUSTOMER_MIDDLE_NAME, CUSTOMER_LAST_NAME);
+        Transaction newTransaction = new Transaction(TRANSACTION_ID, ACCOUNT_RECEIVER, ACCOUNT_SENDER,
+                MONEY_SENDER, MONEY_RECEIVER, TRANSACTION_AMOUNT);
+        customer.addTransaction(newTransaction);
+
+        //when
+        String transactionInfo = customer.transactionInfo(TRANSACTION_ID);
+
+        //then
+        assertEquals("Transaction info -> \r" +
+                " + Money sender -> \r" +
+                "Zygmunt PaczkowskiTransaction ID -> \r" +
+                "1Transaction Amount -> 100.02", transactionInfo);
     }
 }
