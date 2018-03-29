@@ -37,6 +37,8 @@ public class Main {
         mBank.addBranch(branchDep1);
         mBank.addBranch(branchDep2);
 
+        
+
     mBank.printBranches(mBank.getListOfBranches());
         branchDep1.printCustomers(branchDep1.getListOfCustomers(),branchDep1);
         branchDep2.printCustomers(branchDep2.getListOfCustomers(),branchDep2);
