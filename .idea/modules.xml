@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Buchalka.iml" filepath="$PROJECT_DIR$/Buchalka.iml" />
       <module fileurl="file://$PROJECT_DIR$/Buchalka61_BankApp/Buchalka61_BankApp.iml" filepath="$PROJECT_DIR$/Buchalka61_BankApp/Buchalka61_BankApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Buchalka67_playlist/Buchalka67_playlist.iml" filepath="$PROJECT_DIR$/Buchalka67_playlist/Buchalka67_playlist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Buchalka90_Interfaces/Buchalka90_Interfaces.iml" filepath="$PROJECT_DIR$/Buchalka90_Interfaces/Buchalka90_Interfaces.iml" />
     </modules>
   </component>
 </project>
